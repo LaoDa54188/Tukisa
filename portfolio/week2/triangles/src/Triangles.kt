@@ -7,6 +7,9 @@ import kotlin.math.sqrt
 typealias Triangle = Triple<Double, Double, Double>
 
 fun isValidTriangle(triangle: Triangle): Boolean {
+    if (!isValidTriangle(triangle)) {
+        throw IllegalArgumentException("Invalid triangle")
+    }   
     val a = triangle.first
     val b = triangle.second
     val c = triangle.third
